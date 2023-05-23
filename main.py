@@ -5,6 +5,14 @@ def obtener_conexion():
                              user='carlos',
                              password='Carlos123#',
                              database='1')
+    with connection.cursor() as cursor:
+    # Create a new record
+       sql = "INSERT INTO `DevicesData` (`value`, `Datatype`) VALUES ('1', 'prueba')"
+       cursor.execute(sql)
+
+    # connection is not autocommit by default. So you must commit to save
+    # your changes.
+    connection.commit()
     with connection:
         with connection.cursor() as cursor:
             sql = "SELECT * FROM `DevicesData`"
