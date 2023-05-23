@@ -8,7 +8,7 @@ def obtener_conexion():
     with connection:
         with connection.cursor() as cursor:
             sql = "SELECT * FROM `DevicesData`"
-            cursor.execute(sql, ('webmaster@python.org',))
+            cursor.execute(sql)
             result = cursor.fetchone()
             print(result)
 
