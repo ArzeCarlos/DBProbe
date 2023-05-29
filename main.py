@@ -32,7 +32,7 @@ password = 'carlos123'
 usernameDisplay=''
 def obtener_conexion():
     connection = pymysql.connect(host='localhost',
-                             user='carlos',
+                             user='root',
                              password='Carlos123#',
                              database='WSNProjectII')
     with connection:
