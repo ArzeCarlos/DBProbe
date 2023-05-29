@@ -27,7 +27,7 @@ def obtener_conexion():
     connection = pymysql.connect(host='localhost',
                              user='root',
                              password='Carlos123#',
-                             database='1')
+                             database='WSNProjectII')
     with connection:
         with connection.cursor() as cursor:
             sql = "SELECT * FROM `devices`"
