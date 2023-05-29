@@ -30,7 +30,7 @@ def obtener_conexion():
                              database='WSNProjectII')
     with connection:
         with connection.cursor() as cursor:
-            sql = "SELECT * FROM `devices`"
+            sql = "SELECT * FROM `user`"
             cursor.execute(sql)
             result = cursor.fetchone()
             print(result)
