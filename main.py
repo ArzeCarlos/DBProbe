@@ -30,7 +30,7 @@ def obtener_conexion():
                              database='WSNProjectII')
     with connection:
         with connection.cursor() as cursor:
-            sql = "SELECT * FROM `user`"
+            sql = "SELECT * FROM `user` WHERE password=SHA1('123')"
             cursor.execute(sql)
             result = cursor.fetchone()
             print(result)
